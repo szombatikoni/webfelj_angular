@@ -75,6 +75,11 @@ p[hidden] {
   z-index: 100;
 }
 
+.msg {
+  text-align: center;
+  font-weight: bold;
+}
+
 
 
 h2 {
