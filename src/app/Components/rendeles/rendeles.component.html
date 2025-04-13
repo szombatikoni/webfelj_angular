@@ -1,0 +1,26 @@
+<h2>Rendelés összegzés</h2>
+
+<div *ngIf="rendeles">
+  <h3>Felhasználó:</h3>
+  <p>{{rendeles.rendelo.nev}}</p>
+  <p>{{rendeles.rendelo.email}}</p>
+
+  <h3>Kosár tartalma:</h3>
+  <table *ngIf="rendeles.aruk && rendeles.aruk.length>0">
+    <tr *ngFor="let aru of rendeles.aruk">
+      <td>{{aru.nev}}</td>
+      <td>{{aru.kg}} kg</td>
+      <td>{{aru.kg * aru.alapar}} Ft</td>
+    </tr>
+  </table>
+  <H3>Kiszállítja: </H3>
+  <p>{{rendeles.futar.nev}} {{rendeles.futar.ar}} Ft</p>
+  <h3>Végösszeg:</h3>
+  <p>{{rendeles.vegosszeg}} Ft</p>
+
+</div>
+
+<p *ngIf="!rendeles.aruk || rendeles.aruk.length === 0">A kosár üres.</p>
+
+<button [routerLink]="'/piac'">Piachoz</button>
+<button [routerLink]="'/kezdo-lap'">Kezdőlap</button>
