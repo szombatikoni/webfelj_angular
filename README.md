@@ -1,59 +1,39 @@
-# Piac
+# Zöldség-Gyümölcs Rendelő Webalkalmazás
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+Ez a projekt egy Angular alapú webalkalmazás, amely lehetővé teszi a felhasználók számára, hogy zöldségeket és gyümölcsöket rendeljenek egy online piactéren keresztül. A projekt Firebase-szel készült, Firestore adatbázissal és Firebase Hostinggal.
 
-## Development server
+## Élő demó
 
-To start a local development server, run:
+**Firebase Hosting URL:**  
+https://test1-fa011.web.app
 
-```bash
-ng serve
-```
+## Főbb funkciók
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Kosár funkció
+- Bejelentkezés / Regisztráció
+- Termékkategóriák (pl. alma, káposzta, citrom, répa)
+- Futár kiválasztása rendeléshez
+- Rendelés összefoglaló oldal
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+##  Technológiák
 
-```bash
-ng generate component component-name
-```
+- Angular 17
+- Firebase Authentication
+- Firestore Database
+- Firebase Hosting
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Felépítés
 
-```bash
-ng generate --help
-```
+- `src/Components/` – Angular komponensek (piactér, kosár, rendelés)
+- `src/Services/` – szolgáltatások Firestore-hoz és felhasználókhoz
+- `src/Models/` – adatmodellek
+- `src/assets/images/` – termékképek
 
-## Building
+---
 
-To build the project run:
+### Készítette
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Szombati Konrád (IJKCKR) 
+Webfejlesztés (Angular + Firebase) beadandó  
+2024/25. tavaszi félév
