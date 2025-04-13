@@ -13,17 +13,17 @@
       </td>
     </tr>
   </table>
-                                                                
+
   <h4>Válasszon kiszállítást!</h4>
   <select id="futarok" name="futarok" (change)="valasztoFutarValtozas($event)" class="dropdown">
     <option value="">-- Válassz futárt! --</option>
     <option *ngFor="let futar of futarok" [value]="futar.id">{{ futar.nev }}</option>
   </select>
-                                                          
+
   <p class="osszeg">Összesen: {{kosarOsszeg() }} Ft</p>
 
   <div class="gombok">
-    <button [disabled]="!valasztottFutar" (click)="megrendeles()">Megrendelés</button>
+    <button class="btn btn-remove"[disabled]="!valasztottFutar" (click)="megrendeles()">Megrendelés</button>
     <button [routerLink]="'/piac'" class="btn btn-piac">Piachoz</button>
     <button (click)="kijelentkezes()" [routerLink]="'/kezdo-lap'" class="btn">Kijelentkezés</button>
   </div>

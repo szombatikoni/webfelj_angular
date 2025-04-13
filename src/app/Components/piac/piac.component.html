@@ -1,7 +1,8 @@
 <h2>Piac</h2>
 
 <button [routerLink]="'/kosar'" class="btn-kosarhoz">Kosárhoz</button>
-
+<p class="msg" [hidden]="!sikeresUzenetLathato">Sikeresen hozzáadva!</p>
+<p class="msg" [hidden]="!ervenytelenErtek">Érvényes értékeket adjon meg!</p>
 <div class="aru-container">
   <div class="aru-card" *ngFor="let aru of aruk">
     <!-- kép -->
@@ -24,5 +25,5 @@
   </div>
 </div>
 
-<p [hidden]="!sikeresUzenetLathato">Sikeresen hozzáadva!</p>
-<p [hidden]="!ervenytelenErtek">Érvényes értékeket adjon meg!</p>
+
+
