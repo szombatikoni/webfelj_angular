@@ -6,7 +6,7 @@ import { Router, RouterModule } from '@angular/router';
 import { FelhasznaloService } from '../../Services/felhasznalo/felhasznalo.service';
 import { Futar } from '../../Models/futar.model';
 import { v4 as uuidv4 } from 'uuid';
-import { FormsModule } from '@angular/forms';  
+import { FormsModule } from '@angular/forms';
 import { Felhasznalo } from '../../Models/felhasznalo.model';
 
 
@@ -35,7 +35,7 @@ export class KosarComponent {
     }];
   }
 
-  
+
 
   ngOnInit() {
     this.kosarService.getKosar().subscribe(kosar => {
@@ -71,7 +71,7 @@ export class KosarComponent {
     if (futarok) {
       this.valasztottFutar = futarok;
     }
-   
+
   }
 
   async megrendeles() {
@@ -79,6 +79,6 @@ export class KosarComponent {
     await this.kosarService.rendelesLetrehozasa(this.kosarService.getKosarObj(), this.felhasznaloService.getJelenlegiFelhasznalo(), vegosszeg, this.valasztottFutar);
     this.router.navigate(['/rendeles']);
   }
-
- 
 }
+
+

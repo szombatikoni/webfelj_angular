@@ -1,0 +1,35 @@
+<h2>Rendelési lekérdezések</h2>
+
+
+<!-- 2. Rendelések dátum szerint -->
+<mat-card>
+  <mat-card-title>Rendelések dátum szerint növekvő sorrendben</mat-card-title>
+  <mat-divider></mat-divider>
+  <ul>
+    <li *ngFor="let r of datumSzerint">
+      {{ r.rendelo.nev }} – {{ r.datum }} – {{ r.vegosszeg }} Ft
+    </li>
+  </ul>
+</mat-card>
+
+<!-- 3. Nagy összegű rendelések (5000 Ft-tól) -->
+<mat-card>
+  <mat-card-title>5000 Ft feletti rendelések</mat-card-title>
+  <mat-divider></mat-divider>
+  <ul>
+    <li *ngFor="let r of nagyosszeg">
+      {{ r.rendelo.nev }} – {{ r.vegosszeg }} Ft – {{ r.datum }}
+    </li>
+  </ul>
+</mat-card>
+
+<!-- 4. Saját rendeléseim (pl. adott felhasználó id alapján) -->
+<mat-card>
+  <mat-card-title>Saját rendeléseim</mat-card-title>
+  <mat-divider></mat-divider>
+  <ul>
+    <li *ngFor="let r of sajat">
+      {{ r.datum }} – {{ r.vegosszeg }} Ft
+    </li>
+  </ul>
+</mat-card>

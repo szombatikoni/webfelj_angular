@@ -1,0 +1,14 @@
+<h2>E-mail / felhasználónév változtatás</h2>
+<form #profilForm="ngForm" (ngSubmit)="profilMentes()" style="max-width:400px; margin:auto;">
+  <mat-form-field class="inputField" appearance="fill" style="width:100%; margin-bottom:16px;">
+    <mat-label>Név</mat-label>
+    <input matInput id="nev" name="nev" [(ngModel)]="profilNev" required>
+  </mat-form-field>
+  <mat-form-field class="inputField" appearance="fill" style="width:100%; margin-bottom:16px;">
+    <mat-label>E-mail</mat-label>
+    <input matInput id="email" name="email" [(ngModel)]="profilEmail" type="email" required>
+  </mat-form-field>
+  <div style="text-align: center;">
+    <button mat-raised-button class="saveBtn" color="primary" type="submit">Mentés</button>
+  </div>
+</form>

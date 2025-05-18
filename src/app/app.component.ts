@@ -11,5 +11,9 @@ import { Felhasznalo } from './Models/felhasznalo.model';
 })
 export class AppComponent {
   title = 'piac';
-  //rendeles: { kosar: Aru[], felhasznalo: Felhasznalo, vegosszeg: number } | null = null;
+  rendeles: { kosar: Aru[], felhasznalo: Felhasznalo, vegosszeg: number } | null = null;
+  megrendelesKesz(adatok: { kosar: Aru[], felhasznalo: Felhasznalo, vegosszeg: number }) {
+    this.rendeles = adatok;
+  }
+
 }

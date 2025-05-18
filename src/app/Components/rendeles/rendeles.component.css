@@ -9,16 +9,16 @@
   color: #333;
 }
 
-.rendeles-container h2,
-.rendeles-container h3 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
+  .rendeles-container h2,
+  .rendeles-container h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
-.rendeles-container p {
-  margin: 0.5rem 0;
-  text-align: center;
-}
+  .rendeles-container p {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
 
 table {
   width: 100%;
@@ -44,9 +44,9 @@ button {
   transition: background-color 0.2s ease;
 }
 
-button:hover {
-  background-color: #b715da;
-}
+  button:hover {
+    background-color: #b715da;
+  }
 
 .ures-uzenet {
   text-align: center;

@@ -1,39 +1,49 @@
 <div class="container" *ngIf="!belepett">
   <!-- Bejelentkezés doboz -->
-  <div class="card">
+  <mat-card style="margin-bottom: 24px;">
     <h2>Bejelentkezés</h2>
-    <form (ngSubmit)="bejelentkezes()">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+    <form (ngSubmit)="bejelentkezes()" #bejelentkezesForm="ngForm">
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" id="email" name="email" [(ngModel)]="email" required>
+      </mat-form-field>
 
-      <label for="jelszo">Jelszó:</label>
-      <input type="password" id="jelszo" name="jelszo" [(ngModel)]="jelszo" required>
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Jelszó</mat-label>
+        <input matInput type="password" id="jelszo" name="jelszo" [(ngModel)]="jelszo" required>
+      </mat-form-field>
 
-      <button type="submit" class="btn">Bejelentkezés</button>
+      <button mat-raised-button color="primary" type="submit" style="width: 100%; margin-top: 12px;">Bejelentkezés</button>
     </form>
-  </div>
+  </mat-card>
 
   <!-- Regisztráció doboz -->
-  <div class="card">
+  <mat-card>
     <h2>Regisztráció</h2>
-    <form (ngSubmit)="regisztracio()">
-      <label for="nev">Név:</label>
-      <input type="text" id="nev" name="nev" [(ngModel)]="nev" required>
+    <form (ngSubmit)="regisztracio()" #regForm="ngForm">
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Név</mat-label>
+        <input matInput type="text" id="nev" name="nev" [(ngModel)]="nev" required>
+      </mat-form-field>
 
-      <label for="emailReg">Email:</label>
-      <input type="email" id="emailReg" name="emailReg" [(ngModel)]="emailReg" required>
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" id="emailReg" name="emailReg" [(ngModel)]="emailReg" required>
+      </mat-form-field>
 
-      <label for="jelszoReg">Jelszó:</label>
-      <input type="password" id="jelszoReg" name="jelszoReg" [(ngModel)]="jelszoReg" required>
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Jelszó</mat-label>
+        <input matInput type="password" id="jelszoReg" name="jelszoReg" [(ngModel)]="jelszoReg" required>
+      </mat-form-field>
 
-      <button type="submit" class="btn">Regisztráció</button>
+      <button mat-raised-button color="accent" type="submit" style="width: 100%; margin-top: 12px;">Regisztráció</button>
     </form>
-  </div>
+  </mat-card>
 </div>
 
 <!-- Bejelentkezett állapot -->
-<h2>Jelenleg be vagy jelentkezve!</h2>
+<h2 *ngIf="belepett">Jelenleg be vagy jelentkezve!</h2>
 <div class="belepett-box" *ngIf="belepett">
-  <button [routerLink]="'/piac'" class="btn small-btn">Piachoz</button>
-  <button (click)="kijelentkezes()" class="btn small-btn">Kijelentkezés</button>
+  <button mat-stroked-button color="primary" [routerLink]="'/piac'" style="margin-right: 8px;">Piachoz</button>
+  <button mat-stroked-button color="warn" (click)="kijelentkezes()">Kijelentkezés</button>
 </div>
