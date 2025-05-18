@@ -1,5 +1,5 @@
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Aru } from '../../Models/aru.model';
 import { KosarService } from '../../Services/kosar/kosar.service';
@@ -15,9 +15,16 @@ import {  FtKgPipe } from '../../Pipes/ft-kg.pipe';
 })
 
 
-export class PiacComponent {
+export class PiacComponent implements OnInit {
 
   constructor(private kosarService: KosarService) { }
+    ngOnInit(): void {
+      console.log('A PiacComponent inicializálódott!');
+    }
+
+    ngOnDestroy(): void {
+    console.log('A PiacComponent el fog tűnni az oldalról.');
+    }
 
   aruk: Aru[] = [
     { nev: 'káposzta', kg: 0, alapar: 500, kep: 'cabbage.png' },

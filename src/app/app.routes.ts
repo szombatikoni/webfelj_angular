@@ -3,12 +3,14 @@ import { PiacComponent } from './Components/piac/piac.component';
 import { KosarComponent } from './Components/kosar/kosar.component';
 import { KezdoLapComponent } from './Components/kezdo-lap/kezdo-lap.component';
 import { RendelesComponent } from './Components/rendeles/rendeles.component';
+import { ProfilComponent } from './Components/profil/profil.component';
 
 export const routes: Routes = [
   { path: 'piac', component: PiacComponent },
   { path: 'kosar', component: KosarComponent },
   { path: 'rendeles', component: RendelesComponent },
   { path: 'kezdo-lap', component: KezdoLapComponent },
-  { path: '', redirectTo: '/kezdo-lap', pathMatch: 'full' }
+  { path: '', redirectTo: '/kezdo-lap', pathMatch: 'full' },
+  { path: 'profil', component: ProfilComponent }
   
 ];

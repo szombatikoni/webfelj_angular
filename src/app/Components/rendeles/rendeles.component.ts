@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Aru } from '../../Models/aru.model';
 import { KosarService } from '../../Services/kosar/kosar.service';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { Felhasznalo } from '../../Models/felhasznalo.model';
 import { Rendeles } from '../../Models/rendeles.model';
 
- 
+
 
 
 @Component({
@@ -19,8 +19,14 @@ import { Rendeles } from '../../Models/rendeles.model';
   templateUrl: './rendeles.component.html',
   styleUrl: './rendeles.component.css'
 })
-export class RendelesComponent {
+export class RendelesComponent implements OnInit {
+  ngOnInit(): void {
+    console.log('A RendelesComponent inicializálódott!');
+  }
 
+  ngOnDestroy(): void {
+    console.log('A RendelesComponent el fog tűnni az oldalról.');
+  }
   rendeles!: Rendeles;
 
   constructor(private kosarService: KosarService) {

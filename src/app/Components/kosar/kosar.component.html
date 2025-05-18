@@ -23,7 +23,7 @@
   <p class="osszeg">Összesen: {{kosarOsszeg() }} Ft</p>
 
   <div class="gombok">
-    <button class="btn btn-remove"[disabled]="!valasztottFutar" (click)="megrendeles()">Megrendelés</button>
+    <button class="btn btn-remove" [disabled]="!valasztottFutar" (click)="megrendeles()">Megrendelés</button>
     <button [routerLink]="'/piac'" class="btn btn-piac">Piachoz</button>
     <button (click)="kijelentkezes()" [routerLink]="'/kezdo-lap'" class="btn">Kijelentkezés</button>
   </div>
