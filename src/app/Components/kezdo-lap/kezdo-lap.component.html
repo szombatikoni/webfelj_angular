@@ -3,17 +3,19 @@
   <mat-card style="margin-bottom: 24px;">
     <h2>Bejelentkezés</h2>
     <form (ngSubmit)="bejelentkezes()" #bejelentkezesForm="ngForm">
-      <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
         <input matInput type="email" id="email" name="email" [(ngModel)]="email" required>
       </mat-form-field>
 
-      <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-form-field appearance="fill">
         <mat-label>Jelszó</mat-label>
         <input matInput type="password" id="jelszo" name="jelszo" [(ngModel)]="jelszo" required>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" type="submit" style="width: 100%; margin-top: 12px;">Bejelentkezés</button>
+      <div  style="text-align: center; margin-top: 1rem;">
+      <button mat-raised-button class="loginBtn" type="submit">Bejelentkezés</button>
+      </div>
     </form>
   </mat-card>
 
@@ -21,22 +23,23 @@
   <mat-card>
     <h2>Regisztráció</h2>
     <form (ngSubmit)="regisztracio()" #regForm="ngForm">
-      <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-form-field appearance="fill">
         <mat-label>Név</mat-label>
         <input matInput type="text" id="nev" name="nev" [(ngModel)]="nev" required>
       </mat-form-field>
 
-      <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
         <input matInput type="email" id="emailReg" name="emailReg" [(ngModel)]="emailReg" required>
       </mat-form-field>
 
-      <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-form-field appearance="fill">
         <mat-label>Jelszó</mat-label>
         <input matInput type="password" id="jelszoReg" name="jelszoReg" [(ngModel)]="jelszoReg" required>
       </mat-form-field>
-
-      <button mat-raised-button color="accent" type="submit" style="width: 100%; margin-top: 12px;">Regisztráció</button>
+      <div  style="text-align: center; margin-top: 1rem;">
+        <button mat-raised-button class="regBtn" type="submit">Regisztráció</button>
+      </div>
     </form>
   </mat-card>
 </div>

@@ -7,10 +7,11 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCard} from '@angular/material/card';
 
 @Component({
   selector: 'app-profil',
-  imports: [CommonModule, RouterModule, FormsModule, MatInputModule, MatButtonModule, MatFormFieldModule],
+  imports: [CommonModule, RouterModule, FormsModule, MatInputModule, MatButtonModule, MatFormFieldModule, MatCard],
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.css']
 })
@@ -28,7 +29,7 @@ export class ProfilComponent {
       this.userId = user.id;
       this.profilNev = user.nev;
       this.profilEmail = user.email;
-    } 
+    }
   }
 
   async profilMentes() {

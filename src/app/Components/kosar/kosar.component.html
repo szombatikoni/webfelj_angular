@@ -1,30 +1,44 @@
 <div class="kosar-container">
   <h2>Kosár</h2>
 
-
   <h3>Kosár tartalma</h3>
   <table class="kosar-table">
     <tr *ngFor="let aru of kosar">
       <td>{{ aru.nev }}</td>
       <td>{{ aru.kg }} kg</td>
-      <td>{{ aru.kg*aru.alapar }} Ft</td>
+      <td>{{ aru.kg * aru.alapar }} Ft</td>
       <td>
-        <button (click)="kosarbolTorol(aru)" class="btn btn-remove">Eltávolít</button>
+        <button mat-raised-button color="warn" (click)="kosarbolTorol(aru)">
+          Eltávolít
+        </button>
       </td>
     </tr>
   </table>
 
-  <h4>Válasszon kiszállítást!</h4>
+  <h4>Válasszon kiszállítást!*</h4>
   <select id="futarok" name="futarok" (change)="valasztoFutarValtozas($event)" class="dropdown">
     <option value="">-- Válassz futárt! --</option>
     <option *ngFor="let futar of futarok" [value]="futar.id">{{ futar.nev }}</option>
   </select>
 
-  <p class="osszeg">Összesen: {{kosarOsszeg() }} Ft</p>
+  <p class="osszeg">Összesen: {{ kosarOsszeg() }} Ft</p>
 
   <div class="gombok">
-    <button class="btn btn-remove" [disabled]="!valasztottFutar" (click)="megrendeles()">Megrendelés</button>
-    <button [routerLink]="'/piac'" class="btn btn-piac">Piachoz</button>
-    <button (click)="kijelentkezes()" [routerLink]="'/kezdo-lap'" class="btn">Kijelentkezés</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!valasztottFutar"
+      (click)="megrendeles()"
+    >
+      Megrendelés
+    </button>
+
+    <button mat-raised-button color="accent" [routerLink]="'/piac'">
+      Piachoz
+    </button>
+
+    <button mat-raised-button color="warn" (click)="kijelentkezes()" [routerLink]="'/kezdo-lap'">
+      Kijelentkezés
+    </button>
   </div>
 </div>

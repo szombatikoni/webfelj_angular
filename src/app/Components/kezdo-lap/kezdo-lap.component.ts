@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FelhasznaloService } from '../../Services/felhasznalo/felhasznalo.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,11 +8,13 @@ import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 
+
 @Component({
   selector: 'app-kezdo-lap',
   imports: [CommonModule, FormsModule, RouterModule, MatInputModule, MatButtonModule, MatFormFieldModule, MatButtonModule, MatCardModule],
   templateUrl: './kezdo-lap.component.html',
-  styleUrl: './kezdo-lap.component.css'
+  styleUrl: './kezdo-lap.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class KezdoLapComponent implements OnInit{
   email: string = '';
