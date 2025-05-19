@@ -1,12 +1,17 @@
 <h2>Piac</h2>
 
+<!-- Navigációs gombok -->
 <button [routerLink]="'/kosar'" class="btn-kosarhoz">Kosárhoz</button>
 <button [routerLink]="'/profil'" class="btn-profilhoz">Profil</button>
+
+<!-- Üzenetek -->
 <p class="msg" [hidden]="!sikeresUzenetLathato">Sikeresen hozzáadva!</p>
 <p class="msg" [hidden]="!ervenytelenErtek">Érvényes értékeket adjon meg!</p>
+
+<!-- Termékek -->
 <div class="aru-container">
   <div class="aru-card" *ngFor="let aru of aruk">
-    <!-- kép -->
+    <!-- Kép -->
     <img [ngSrc]="'assets/images/' + aru.kep"
          width="150"
          height="150"
@@ -16,11 +21,12 @@
     <p class="aru-nev">{{ aru.nev }}</p>
     <p class="aru-ar">{{ aru.alapar | ftkg }}</p>
 
+    <!-- Mennyiség -->
     <div class="mennyiseg-sor">
       <input type="text" #adottKg placeholder="Mennyiség (kg)">
     </div>
 
-    <button (click)="kosarhozAd(aru, +adottKg.value)">Kosárba</button>
+    <!-- Kosárba gomb -->
+    <button mat-raised-button color="primary" (click)="kosarhozAd(aru, +adottKg.value)">Kosárba</button>
   </div>
 </div>
-

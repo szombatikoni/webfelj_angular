@@ -8,11 +8,12 @@ import { Futar } from '../../Models/futar.model';
 import { v4 as uuidv4 } from 'uuid';
 import { FormsModule } from '@angular/forms';
 import { Felhasznalo } from '../../Models/felhasznalo.model';
+import {MatButton} from '@angular/material/button';
 
 
 @Component({
   selector: 'app-kosar',
-  imports: [CommonModule, RouterModule, FormsModule],
+  imports: [CommonModule, RouterModule, FormsModule, MatButton],
   templateUrl: './kosar.component.html',
   styleUrl: './kosar.component.css'
 })

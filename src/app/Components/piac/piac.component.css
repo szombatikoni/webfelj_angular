@@ -5,13 +5,13 @@
   margin: 0 auto;
   gap: 1rem 6rem;
   padding: 5rem;
-  background-color: lightgrey;
+  background-color: #1e1e1e;
   min-height: 100vh;
   justify-items: center;
 }
 
 .aru-card {
-  background-color: darkgrey;
+  background-color: #3f3f70;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.1);
@@ -19,14 +19,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: black;
+  color: #e0e0e0;
   height: 300px;
   margin: 0 auto;
+  border: 2px solid black;
+  text-shadow:
+    -1px -1px 0 black,
+    0   -1px 0 black,
+    1px -1px 0 black,
+    -1px  0   0 black,
+    1px  0   0 black,
+    -1px  1px 0 black,
+    0    1px 0 black,
+    1px  1px 0 black;
 }
 
 .aru-card p {
   margin: 0.5rem 0;
   font-weight: bold;
+}
+
+.aru-kep {
+  border-radius: 10px;
+  border: 2px solid black;
 }
 
 .aru-card input[type="text"] {
@@ -39,23 +54,6 @@
   box-shadow: 1px 1px 1px lightgrey;
 }
 
-.aru-card button {
-  background-color: black;
-  color: floralwhite;
-  padding: 0.6rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  width: 60%;
-  margin: 0 auto;
-  display: block;
-  transition: background-color 0.2s ease;
-}
-.aru-card button:hover {
-  background-color: #b715da;
-  outline: 4px solid whitesmoke;
-}
 
 p[hidden] {
   display: none;
@@ -63,10 +61,8 @@ p[hidden] {
 
 .btn-kosarhoz {
   position: absolute;
-  top: 20px;
-  right: 50px;
-  background-color: #6233d3;
-  color: floralwhite;
+  top: 20px !important;
+  right: 50px !important;
   padding: 0.6rem 1.2rem;
   border-radius: 10px;
   letter-spacing: 1px;
@@ -75,15 +71,15 @@ p[hidden] {
   border: none;
   cursor: pointer;
   z-index: 100;
+  color: black;
+  background-color: #376098;
 }
 
 .btn-profilhoz {
   position: absolute;
-  top: 70px;
-  right: 50px;
-  background-color: #6233d3;
+  top: 70px !important;
+  right: 50px !important;
   letter-spacing: 1px;
-  color: floralwhite;
   padding: 0.6rem 1.2rem;
   border-radius: 10px;
   font-weight: bold;
@@ -91,6 +87,8 @@ p[hidden] {
   border: none;
   cursor: pointer;
   z-index: 100;
+  color: black;
+  background-color: #376098;
 }
 
 .btn-kosarhoz:hover {
@@ -104,9 +102,22 @@ p[hidden] {
 h2 {
   text-align: center;
   font-weight: bold;
+  color: #e0e0e0;
 }
 
 .msg{
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #e0e0e0;
+  text-shadow:
+    -1px -1px 0 black,
+    0   -1px 0 black,
+    1px -1px 0 black,
+    -1px  0   0 black,
+    1px  0   0 black,
+    -1px  1px 0 black,
+    0    1px 0 black,
+    1px  1px 0 black;
 }

@@ -1,17 +1,19 @@
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Aru } from '../../Models/aru.model';
 import { KosarService } from '../../Services/kosar/kosar.service';
 import {  FtKgPipe } from '../../Pipes/ft-kg.pipe';
+import {MatButton} from '@angular/material/button';
 
 
 @Component({
   selector: 'app-piac',
   standalone: true,
-  imports: [CommonModule, RouterModule, FtKgPipe, NgOptimizedImage],
+  imports: [CommonModule, RouterModule, FtKgPipe, NgOptimizedImage, MatButton],
   templateUrl: './piac.component.html',
-  styleUrls: ['./piac.component.css']
+  styleUrls: ['./piac.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 

@@ -1,131 +1,146 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+/* Teljes háttér a body-n */
 html, body {
-  background-color: lightgrey;
-  color: white;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #1e1e1e;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Középre rendezett konténer */
 .container {
   display: flex;
   justify-content: center;
   gap: 4rem;
   padding: 3rem 1rem;
-  background-color: #d6d6d6;
-  min-height: 100vh;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
+/* Kártyák (login, regisztráció) */
 mat-card {
-  width: 360px;
+  width: 300px;
   padding: 2rem;
-  border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  background-color: #464b80 !important;
+  border-radius: 12px;
+  justify-content: center;
+  border: 4px solid black !important;
 }
 
-mat-card h2 {
-  text-align: center;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 1.5rem;
+.loginBtn.mat-mdc-raised-button {
+  background-color: #376098 !important; /* lila */
+  color: black !important;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 1px solid black !important;
 }
 
-mat-form-field {
-  margin-bottom: 0.2rem;
-  font-size: 0.9rem;
+.loginBtn.mat-mdc-raised-button:hover {
+  outline: 2px solid #e4e4e4 !important;
 }
 
-input.mat-input-element {
-  padding: 0.1rem 0.1rem;
-  font-size: 0.9rem;
-  height: 10px;
+.regBtn.mat-mdc-raised-button {
+  color: black !important;
+  background-color: #376098 !important;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid black !important;
 }
+
+.regBtn.mat-mdc-raised-button:hover {
+  outline: 2px solid #e4e4e4 !important;
+}
+/* >>> Material form field módosítások <<< */
+
+/* A form field doboz (kívülről) */
+.mat-mdc-form-field {
+  background-color: #1e1e1e !important;
+  border-radius: 6px;
+  padding: 0 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Eltávolítja a világos háttérdobozokat */
+.mdc-filled-text-field {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+::placeholder {
+  color: #1e1e1e !important;
+}
+
+
+.mat-mdc-text-field-wrapper {
+  background-color: transparent !important;
+}
+
+input.mat-mdc-input-element:-webkit-autofill {
+  background-color: #1e1e1e !important;
+  -webkit-box-shadow: 0 0 0 1000px #1e1e1e inset !important;
+  -webkit-text-fill-color: #e0e0e0 !important;
+  transition: background-color 0s ease-in-out 9999s;
+}
+
+
+.mat-mdc-input-element {
+  color: #e0e0e0 !important;
+  background-color: transparent !important;
+  font-size: 0.95rem;
+  padding: 0.6rem 0.3rem;
+  width: 100%;
+}
+
+.mdc-filled-text-field {
+  background-color: #1e1e1e !important;
+}
+
+
+.mat-mdc-floating-label {
+  color: #e0e0e0 !important;
+}
+
+
+.mat-mdc-input-element:hover {
+  background-color: #1e1e1e !important;
+}
+
+
+.mat-mdc-form-field.mat-form-field-invalid {
+  box-shadow: 0 0 0 2px #1e1e1e !important;
+  border-radius: 6px;
+}
+
+
+.mat-mdc-form-field-error {
+  color: #1e1e1e;
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+}
+
 
 button[type="submit"] {
-  width: 100%;
-  margin-top: 1rem;
-  padding: 0.8rem;
-  font-weight: 600;
-}
-
-.belepett-box {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-}
-
-h2 {
-  color: #222;
-  font-size: 1.5rem;
-}
-
-label {
-  font-weight: bold;
-  display: inline-block;
-  width: 100%;
-  max-width: 100%;
-  text-align: left;
-  box-sizing: content-box;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-input {
-  width: 85%;
-  margin: 0 auto 1.5rem;
-  display: block;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px lightgrey;
-}
-
-.btn {
-  background-color: black;
-  color: floralwhite;
-  padding: 0.6rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-
-  width: 60%;
-  margin: 0 auto;
-  display: block;
-}
-
-.belepett-box {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-  z-index: 1000;
-}
-
-.belepett-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.small-btn {
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-  width: auto;
-  margin: 0;
-}
-
-h2 {
+  margin-top: 12px;
   text-align: center;
+  justify-self: center;
+}
+
+
+h2 {
+  color: #cacaca;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow:
+    -1px -1px 0 black,
+    0   -1px 0 black,
+    1px -1px 0 black,
+    -1px  0   0 black,
+    1px  0   0 black,
+    -1px  1px 0 black,
+    0    1px 0 black,
+    1px  1px 0 black;
 }

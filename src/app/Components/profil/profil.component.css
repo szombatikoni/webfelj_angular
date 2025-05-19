@@ -1,20 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+}
+
+/* Címsor középen */
 h2 {
   text-align: center;
 }
 
-.saveBtn {
-  align-self: center;
-  font-weight: bold;
-  color: whitesmoke !important;
-  background-color: #6233d3 !important;
-  letter-spacing: 2px;
+/* Konténer: flex + teljes képernyő + középre igazítás */
+.profilContainer {
+  display: flex;
+  justify-content: center;     /* vízszintesen középre */
+  align-items: center;         /* függőlegesen középre */
+  height: 100vh;               /* teljes képernyő magasság */
+  width: 100%;
+  background-color: #1e1e1e;
 }
 
-.saveBtn:hover {
-  outline: 3px solid #e4e4e4;
+/* Kártya stílus */
+mat-card {
+  background-color: #3f3f70;
+  border-radius: 12px;
+  padding: 2rem;
+  color: #e0e0e0;
+  width: 360px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
+
+/* Input mezők */
 .inputField {
-  color: black !important;
-
+  width: 100%;
+  margin-bottom: 1rem;
 }

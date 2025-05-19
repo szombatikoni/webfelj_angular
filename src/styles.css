@@ -2,7 +2,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: sans-serif, "Helvetica Neue", sans-serif; }
 
 html, body {
-  background-color: lightgrey;
+  background-color: #1e1e1e;
   color: black;
   margin: 0;
   padding: 0;
@@ -12,3 +12,113 @@ html, body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-card {
+  width: 300px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #464b80 !important;
+  border-radius: 12px;
+  justify-content: center;
+  border: 4px solid black !important;
+}
+
+/* A form field doboz (kívülről) */
+.mat-mdc-form-field {
+  background-color: #1e1e1e !important;
+  border-radius: 6px;
+  padding: 0 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Eltávolítja a világos háttérdobozokat */
+.mdc-filled-text-field {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+::placeholder {
+  color: #1e1e1e !important;
+}
+
+
+.mat-mdc-text-field-wrapper {
+  background-color: transparent !important;
+}
+
+input.mat-mdc-input-element:-webkit-autofill {
+  background-color: #1e1e1e !important;
+  -webkit-box-shadow: 0 0 0 1000px #1e1e1e inset !important;
+  -webkit-text-fill-color: #e0e0e0 !important;
+  transition: background-color 0s ease-in-out 9999s;
+}
+
+
+.mat-mdc-input-element {
+  color: #e0e0e0 !important;
+  background-color: transparent !important;
+  font-size: 0.95rem;
+  padding: 0.6rem 0.3rem;
+  width: 100%;
+}
+
+.mdc-filled-text-field {
+  background-color: #1e1e1e !important;
+}
+
+.mat-mdc-raised-button {
+  color: black !important;
+  background-color: #376098 !important;
+  border-radius: 5px !important;
+  letter-spacing: 1px;
+  text-transform: uppercase !important;
+  border: 1px solid black !important;
+}
+
+.mat-mdc-raised-button:hover {
+  outline: 2px solid #e4e4e4 !important;
+}
+
+button.mat-mdc-raised-button {
+  background-color: #6233d3 !important;
+  color: whitesmoke !important;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 0.6rem 2rem;
+  letter-spacing: 1px;
+  box-shadow: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button.mat-raised-button:hover {
+  background-color: #4e25b1 !important;
+  outline: 2px solid #e0e0e0;
+}
+
+h2 {
+  text-shadow:
+    -1px -1px 0 black,
+    0   -1px 0 black,
+    1px -1px 0 black,
+    -1px  0   0 black,
+    1px  0   0 black,
+    -1px  1px 0 black,
+    0    1px 0 black,
+    1px  1px 0 black;
+}
+
+
+.mat-mdc-floating-label {
+  color: #e0e0e0 !important;
+}
+
+
+.mat-mdc-input-element:hover {
+  background-color: #1e1e1e !important;
+}
+
+
+.mat-mdc-form-field.mat-form-field-invalid {
+  box-shadow: 0 0 0 2px #1e1e1e !important;
+  border-radius: 6px;
+}
