@@ -47,6 +47,9 @@
 <!-- Bejelentkezett állapot -->
 <h2 *ngIf="belepett">Jelenleg be vagy jelentkezve!</h2>
 <div class="belepett-box" *ngIf="belepett">
-  <button mat-stroked-button color="primary" [routerLink]="'/piac'" style="margin-right: 8px;">Piachoz</button>
-  <button mat-stroked-button color="warn" (click)="kijelentkezes()">Kijelentkezés</button>
+  <div style="text-align: center">
+    <button mat-raised-button color="primary" [routerLink]="'/piac'" style="margin-right: 8px;">Piachoz</button>
+    <button mat-raised-button color="warn" (click)="kijelentkezes()">Kijelentkezés</button>
+  </div>
+
 </div>
